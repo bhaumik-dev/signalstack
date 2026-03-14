@@ -7,7 +7,7 @@ const Layout = ({children}:{children: React.ReactNode}) => {
         /*Styles we want on all pages*/
 
         // Main
-        <main className="min-h-screen text-gray-400">
+        <main className="min-h-screen text-gray-400 lg:flex sm:flex-col sm:justify-between">
 
             <section className="auth-left-section scrollbar-hide-default">
                 <Link href="/" className="auth-logo">
@@ -20,11 +20,11 @@ const Layout = ({children}:{children: React.ReactNode}) => {
             {/* Right/Bottom section with rating/review */}
 
             <section className="auth-right-section">
-                <div className="z-10 relative lg:mt-4 lg:mb-16">
+                <div className="z-10 relative  lg:mt-4 lg:mb-16">
                     <blockquote className="auth-blockquote">
                         SignalStack turned my watchlist into a winning list. The alerts are spot-on, and I feel more confident investing in the market.
                     </blockquote>
-                    <div className="flex items-center justify-center">
+                    <div className="flex items-center justify-between w-full">
                         <div>
                             <cite className="auth-testimonial-author">- Ethan R.</cite>
                             <p className="max-md:text-xs text-gray-500">Retail Investor</p>
@@ -35,6 +35,10 @@ const Layout = ({children}:{children: React.ReactNode}) => {
                             ))}
                         </div>
                     </div>
+                </div>
+
+                <div className="flex-1 relative">
+                    <Image src="/assets/images/dashboard.png" alt="Dashboard Preview" width={1440} height={1150} className="auth-dashboard-preview absolute top-0"/>
                 </div>
             </section>
 
